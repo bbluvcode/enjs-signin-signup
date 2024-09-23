@@ -1,0 +1,30 @@
+doctype html
+
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title  Registration or Sign Up form in HTML CSS | CodingLab 
+  link(rel='stylesheet' type='text/css' href='/stylesheets/register.css')
+
+.wrapper
+  if e
+    p.error-msg=e
+  h2 Registration
+  form(action='/signup' method='POST')  
+    .input-box
+      input#username(type='text' name='username' placeholder=`Enter your username` value=`${username}`)       
+    .input-box
+      input#email(type='text' name='email' placeholder='Enter your email' value=`${email}`)
+    .input-box
+      input#password(type='password' name='password' placeholder='Create password' )
+    .input-box
+      input#repassword(type='password' name='repassword' placeholder='Confirm password')
+    .policy
+      input#accept(type='checkbox' name='accept')
+      h3 I accept all terms &amp; condition    
+    .input-box.button
+      input(type='submit' value='Register')
+    .text
+      h3
+        | Already have an account? 
+        a(href='/') Login now

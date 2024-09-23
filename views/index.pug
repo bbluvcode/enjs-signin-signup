@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .wrapper    
+    h1   
+      a(href='/login') Login
+    h1   
+      a(href='/signup') Sign Up
+  script.
+    if (window.location.search.includes("signup=success")) {
+      alert("Registration successful!");
+    }
+
+    if (window.location.search.includes("signin=success")) {
+      alert("SignIn successful!");
+    }

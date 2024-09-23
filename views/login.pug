@@ -1,0 +1,26 @@
+doctype html
+
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title  Login 
+  link(rel='stylesheet' type='text/css' href='/stylesheets/register.css')
+
+.wrapper
+  if e
+    p.error-msg=e
+  h2 Login
+  form(action='/login' method='POST')  
+    .input-box
+      input#username(type='text' name='username' placeholder=`Enter your username`)       
+    .input-box
+      input#password(type='password' name='password' placeholder='Enter your password' )
+    .policy
+      input#accept(type='checkbox' name='accept')
+      h3 Remember Me
+    .input-box.button
+      input(type='submit' value='Login')
+    .text
+      h3
+        | Forgot your password?
+        a(href='/') Reset password
